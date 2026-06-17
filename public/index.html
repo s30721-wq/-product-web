@@ -1,0 +1,281 @@
+<!DOCTYPE html>
+<html lang="zh-TW">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>極簡北歐風・療癒小褐熊公仔</title>
+    <style>
+        /* 全域樣式與字體設定 */
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+            font-family: 'Helvetica Neue', Arial, 'Noto Sans TC', sans-serif;
+        }
+
+        body {
+            background-color: #fcf9f5; /* 溫暖的奶油白背景 */
+            color: #4a3e3d; /* 深褐灰色字體，比純黑更溫柔 */
+            line-height: 1.6;
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 20px;
+        }
+
+        /* 網頁頁首 */
+        header {
+            text-align: center;
+            padding: 30px 0;
+            border-bottom: 1px solid #f0e6df;
+        }
+
+        header h1 {
+            font-size: 1.8rem;
+            font-weight: 500;
+            letter-spacing: 2px;
+            color: #8c6a5c;
+        }
+
+        /* 主要區塊：商品主圖與購買資訊 */
+        .product-main {
+            display: flex;
+            flex-direction: column;
+            gap: 40px;
+            padding: 40px 0;
+        }
+
+        @media (min-width: 768px) {
+            .product-main {
+                flex-direction: row;
+                align-items: center;
+            }
+            .product-image, .product-info {
+                flex: 1;
+            }
+        }
+
+        /* 商品主圖區 */
+        .product-image {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            background-color: #ffffff;
+            border-radius: 20px;
+            padding: 40px;
+            box-shadow: 0 4px 15px rgba(140, 106, 92, 0.05);
+        }
+
+        .product-image img {
+            max-width: 100%;
+            height: auto;
+            max-height: 450px;
+            object-fit: contain;
+            transition: transform 0.3s ease;
+        }
+
+        .product-image img:hover {
+            transform: scale(1.03);
+        }
+
+        /* 商品資訊與購買區 */
+        .product-info {
+            display: flex;
+            flex-direction: column;
+            gap: 20px;
+        }
+
+        .product-title {
+            font-size: 2rem;
+            color: #5c463e;
+            font-weight: 600;
+        }
+
+        .product-tagline {
+            font-size: 1.1rem;
+            color: #a88c80;
+            margin-top: -10px;
+        }
+
+        /* 商品賣點 */
+        .selling-points {
+            list-style: none;
+            margin: 15px 0;
+        }
+
+        .selling-points li {
+            position: relative;
+            padding-left: 25px;
+            margin-bottom: 12px;
+            font-size: 1rem;
+            color: #6b554f;
+        }
+
+        .selling-points li::before {
+            content: "✓";
+            position: absolute;
+            left: 0;
+            color: #b08d7f;
+            font-weight: bold;
+        }
+
+        /* 價格區塊 */
+        .price-box {
+            margin: 10px 0;
+        }
+
+        .price-original {
+            text-decoration: line-through;
+            color: #a89a93;
+            font-size: 0.95rem;
+            margin-right: 10px;
+        }
+
+        .price-sale {
+            font-size: 1.8rem;
+            font-weight: bold;
+            color: #b06246;
+        }
+
+        /* 購買按鈕與互動 */
+        .purchase-section {
+            display: flex;
+            flex-direction: column;
+            gap: 15px;
+            margin-top: 10px;
+        }
+
+        .btn-buy {
+            background-color: #8c6a5c;
+            color: #ffffff;
+            border: none;
+            padding: 16px 32px;
+            font-size: 1.2rem;
+            font-weight: 600;
+            border-radius: 30px;
+            cursor: pointer;
+            transition: background-color 0.2s, transform 0.1s;
+            box-shadow: 0 4px 10px rgba(140, 106, 92, 0.2);
+            text-align: center;
+        }
+
+        .btn-buy:hover {
+            background-color: #735346;
+        }
+
+        .btn-buy:active {
+            transform: scale(0.98);
+        }
+
+        /* 分隔線 */
+        hr {
+            border: 0;
+            height: 1px;
+            background: #f0e6df;
+            margin: 40px 0;
+        }
+
+        /* 詳細介紹文案區 */
+        .product-details {
+            max-width: 800px;
+            margin: 0 auto;
+            padding-bottom: 60px;
+        }
+
+        .details-title {
+            text-align: center;
+            font-size: 1.5rem;
+            color: #5c463e;
+            margin-bottom: 25px;
+            position: relative;
+        }
+
+        .details-title::after {
+            content: "";
+            display: block;
+            width: 40px;
+            height: 2px;
+            background-color: #8c6a5c;
+            margin: 8px auto 0;
+        }
+
+        .details-content {
+            font-size: 1.05rem;
+            color: #5c4d4a;
+            text-align: justify;
+        }
+
+        .details-content p {
+            margin-bottom: 20px;
+        }
+
+        /* 頁尾 */
+        footer {
+            text-align: center;
+            padding: 30px 0;
+            font-size: 0.85rem;
+            color: #a89a93;
+            border-top: 1px solid #f0e6df;
+        }
+    </style>
+</head>
+<body>
+
+    <div class="container">
+        <header>
+            <h1>MINIMALIST HOME</h1>
+        </header>
+
+        <main class="product-main">
+            <div class="product-image">
+                <img src="product.jpg" alt="極簡北歐風・療癒小褐熊公仔">
+            </div>
+
+            <div class="product-info">
+                <h2 class="product-title">極簡北歐風・療癒小褐熊公仔</h2>
+                <p class="product-tagline">用最純粹的線條，給日常留一抹溫柔的陪伴。</p>
+                
+                <hr style="margin: 10px 0;">
+
+                <ul class="selling-points">
+                    <li><strong>極簡美學設計</strong>：捨去繁複線條，融入日系與北歐風空間。</li>
+                    <li><strong>安全親膚材質</strong>：採用無毒無味環保霧面材質，觸感細膩柔滑。</li>
+                    <li><strong>溫潤大地色彩</strong>：精選療癒系暖褐色調，百搭各種室內裝潢。</li>
+                    <li><strong>全齡日常陪伴</strong>：是辦公桌上的舒壓小物，也是孩子床頭的溫柔守護。</li>
+                </ul>
+
+                <div class="price-box">
+                    <span class="price-original">原價 NT$ 880</span>
+                    <span class="price-sale">特價 NT$ 520</span>
+                </div>
+
+                <div class="purchase-section">
+                    <button class="btn-buy" id="buyBtn">立即加入購物車</button>
+                </div>
+            </div>
+        </main>
+
+        <hr>
+
+        <section class="product-details">
+            <h3 class="details-title">設計理念與日常點滴</h3>
+            <div class="details-content">
+                <p>在繁雜忙碌的生活節奏中，我們總在尋找一處能讓心靈沉澱的角落。這款「療癒小褐熊」正是秉持著極簡美學而生。我們拿掉了過多的裝飾，僅用最純粹的幾何與內斂的五官，勾勒出小熊最純真溫厚的神情。</p>
+                <p>不論是置於書桌一角在疲憊時靜靜相伴，或是作為客廳一隅的文藝點綴，它那溫潤的霧面質地與大地暖棕色調，都能悄悄揉合進空間裡，營造出和諧、舒適的居家溫度。這不僅是一件物件，更是一份無聲卻悠長的精神寄託。</p>
+            </div>
+        </section>
+    </div>
+
+    <footer>
+        <p>© 2026 Minimalist Home. All Rights Reserved.</p>
+    </footer>
+
+    <script>
+        document.getElementById('buyBtn').addEventListener('click', function() {
+            alert('感謝您的支持！已將「極簡北歐風・療癒小褐熊公仔」成功加入購物車。');
+        });
+    </script>
+</body>
+</html>
